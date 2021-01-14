@@ -6,7 +6,8 @@ const myTheme: DefaultTheme = {
         main: 'rgb(100, 109, 246)',
         darker: 'rgb(35, 50, 252)',
         lighter: 'rgb(120, 129, 245)',
-        black: 'black'
+        black: 'black',
+        lightgray: 'rgb(220,220,220)'
   },
   headerFont:"Arial"
 

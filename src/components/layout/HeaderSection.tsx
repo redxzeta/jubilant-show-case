@@ -3,20 +3,19 @@ import styled from "styled-components";
 interface IChildrenProps {
   children: React.ReactNode;
 }
-const ShowContainer = styled.div`
-  max-width: 1224px;
+const HeaderContainer = styled.header`
   width: 100%;
-  margin: auto;
   padding: 15px;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 25px;
+  margin-top: 10px;
 `;
 
-const Container: React.FC<IChildrenProps> = ({ children }) => {
-  return <ShowContainer>{children}</ShowContainer>;
+const HeaderSection: React.FC<IChildrenProps> = ({ children }) => {
+  return <HeaderContainer>{children}</HeaderContainer>;
 };
-
-export default Container;
+export default HeaderSection;
