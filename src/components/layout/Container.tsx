@@ -4,9 +4,14 @@ interface IChildrenProps {
   children: React.ReactNode;
 }
 const ShowContainer = styled.div`
-  width: 1024px;
+  max-width: 1024px;
+  width: 100%;
   margin: auto;
   padding: 15px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Container: React.FC<IChildrenProps> = ({ children }) => {

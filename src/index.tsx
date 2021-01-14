@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import App from "./App";
 import { myTheme } from "./myTheme";
 import reportWebVitals from "./reportWebVitals";
+import Store from "./store/store";
 
 interface IGlobalStyle {}
 
@@ -16,16 +18,19 @@ const GlobalStyle = createGlobalStyle<IGlobalStyle>`
   box-sizing: inherit;
 }
 body {
-color:green;
+color:${(props) => props.theme.colors.black};
+font-family: ${(props) => props.theme.headerFont}
 }
 `;
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={myTheme}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
+    <Provider store={Store}>
+      <ThemeProvider theme={myTheme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>,
 
   document.getElementById("root")

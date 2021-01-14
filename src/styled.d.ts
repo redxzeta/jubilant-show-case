@@ -8,7 +8,9 @@ declare module 'styled-components' {
     headerFont: string;
     colors: {
       main: string;
-      secondary: string;
+      darker: string;
+      lighter: string;
+      black:string;
     };
   }
 }
