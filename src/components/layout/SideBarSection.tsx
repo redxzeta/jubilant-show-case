@@ -5,9 +5,10 @@ interface IChildrenProps {
 }
 
 const SideBarContainer = styled.div`
-  background-color: lightgray;
-  -webkit-flex: 1;
-  flex: 1;
+  background-color: teal;
+
+  width: 200px;
+  height: 200px;
 `;
 
 const SideBarSection: React.FC<IChildrenProps> = ({ children }) => {

@@ -9,7 +9,7 @@ const ContentContainer = styled.div`
   height: auto;
   padding: 10px;
   min-height: 100%;
-  flex-direction: column;
+  display: flex;
   background-color: ${(props) => props.theme.colors.lightgray};
 `;
 
