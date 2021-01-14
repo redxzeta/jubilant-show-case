@@ -4,11 +4,11 @@ const userNameSlice = createSlice({
     name:'user',
     initialState: '',
     reducers: {
-      setName: (state, { payload }) => payload,
+      setUserName: (state, { payload }) => payload,
     },
 })
 
 const userName = userNameSlice.reducer;
-const setUserName = userNameSlice.actions.setName;
+const setUserName = userNameSlice.actions.setUserName;
 
 export {userName, setUserName}

@@ -1,19 +1,16 @@
 import { Fragment } from "react";
-
+import { useSelector } from "react-redux";
 import Landing from "./components/landing/Landing";
 
-// import Container from "./components/layout/Container";
-// const Button = styled.button`
-//   background: palevioletred;
-//   border-radius: 3px;
-//   border: none;
-//   color: white;
-// `;
-
 const App: React.FC = () => {
+  const userName = useSelector<{ userName: string }>(
+    ({ userName }) => userName
+  );
+
+  console.log(userName);
   return (
     <Fragment>
-      <Landing />
+      {!userName ? <Landing /> : <h2>{userName} is heres</h2>}{" "}
     </Fragment>
   );
 };

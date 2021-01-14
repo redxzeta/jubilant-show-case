@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import { setUserName } from "../../store/slices/userNameSlice";
 import Button from "../styledComponents/Button";
 import HeaderTitle from "../styledComponents/HeaderTitle";
 
@@ -27,6 +29,11 @@ const SubTitle = styled.h2`
 `;
 const Landing: React.FC = () => {
   const [name, setName] = useState("");
+  const dispatch = useDispatch();
+  const submitUserName = (userName: string) => {
+    dispatch(setUserName(userName));
+  };
+
   return (
     <LandingContainer>
       <HeaderTitle>Hi there! Welcome to your education showcase</HeaderTitle>
@@ -36,7 +43,7 @@ const Landing: React.FC = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <Button onClick={() => setName("what")}>Submit</Button>
+      <Button onClick={() => submitUserName(name)}>Submit</Button>
     </LandingContainer>
   );
 };

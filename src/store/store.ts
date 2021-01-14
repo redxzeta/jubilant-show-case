@@ -6,7 +6,7 @@ const rootReducer = combineReducers({
     userName
 })
 
-const Store= configureStore({
+const Store = configureStore({
     reducer:rootReducer
 })
 
